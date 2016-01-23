@@ -15,7 +15,7 @@ $(AUSOCK_BIN): $(SOCK_OBJ) $(FILE_OBJ)
 
 $(SOCK_OBJ):
 	mkdir -p $(OBJECT)
-	$(CC) $(CFLAGS)  -c -o $(SOCK_OBJ) $(SOURCE)/sock.c
+	$(CC) $(CFLAGS) -c -o $(SOCK_OBJ) $(SOURCE)/sock.c
 
 $(FILE_OBJ):
 	mkdir -p $(OBJECT)
