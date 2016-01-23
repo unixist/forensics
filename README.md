@@ -1,5 +1,5 @@
 # forensics
 Various frensicational tools
 
-## [ausock](ausock/README.md)
+## [ausock](ausock/)
 Parse linux's auditd `audit.log` file for network connections
