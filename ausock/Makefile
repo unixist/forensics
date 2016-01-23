@@ -11,15 +11,15 @@ all: $(AUSOCK_BIN)
 
 $(AUSOCK_BIN): $(SOCK_OBJ) $(FILE_OBJ)
 	mkdir -p $(BIN)
-	gcc $(FILE_OBJ) $(SOCK_OBJ) $(SOURCE)/main.c -o $(AUSOCK_BIN)
+	$(CC) $(CFLAGS) $(FILE_OBJ) $(SOCK_OBJ) $(SOURCE)/main.c -o $(AUSOCK_BIN)
 
 $(SOCK_OBJ):
 	mkdir -p $(OBJECT)
-	$(CC) -c -o $(SOCK_OBJ) $(SOURCE)/sock.c
+	$(CC) $(CFLAGS)  -c -o $(SOCK_OBJ) $(SOURCE)/sock.c
 
 $(FILE_OBJ):
 	mkdir -p $(OBJECT)
-	$(CC) -c -o $(FILE_OBJ) $(SOURCE)/file.c
+	$(CC) $(CFLAGS) -c -o $(FILE_OBJ) $(SOURCE)/file.c
 
 clean:
 	rm -rf $(OBJECT)
